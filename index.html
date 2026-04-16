@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>科研成果信息管理</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>科研成果信息管理系统</h1>
+    <p>支持按栏目录入项目、论文、编著与讲座信息，并一键导出 PDF。</p>
+  </header>
+
+  <main id="export-area" class="container">
+    <section class="card" data-table-card>
+      <div class="card-header">
+        <h2>项目经历</h2>
+        <div class="actions">
+          <button type="button" class="toggle-edit-btn" data-toggle-edit>启用编辑</button>
+          <button type="button" class="add-row-btn" data-add-row>新增一行</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table data-editable-table>
+          <thead>
+            <tr>
+              <th>项目名称</th>
+              <th>项目编号</th>
+              <th>主要工作</th>
+              <th>项目时间</th>
+              <th>项目级别</th>
+              <th class="no-export">操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td class="no-export"><button type="button" class="delete-row-btn" data-delete-row>删除</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" data-table-card>
+      <div class="card-header">
+        <h2>论文信息</h2>
+        <div class="actions">
+          <button type="button" class="toggle-edit-btn" data-toggle-edit>启用编辑</button>
+          <button type="button" class="add-row-btn" data-add-row>新增一行</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table data-editable-table>
+          <thead>
+            <tr>
+              <th>论文题目</th>
+              <th>期刊</th>
+              <th>年份</th>
+              <th>作者排序</th>
+              <th>备注</th>
+              <th class="no-export">操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td class="no-export"><button type="button" class="delete-row-btn" data-delete-row>删除</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" data-table-card>
+      <div class="card-header">
+        <h2>编著信息</h2>
+        <div class="actions">
+          <button type="button" class="toggle-edit-btn" data-toggle-edit>启用编辑</button>
+          <button type="button" class="add-row-btn" data-add-row>新增一行</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table data-editable-table>
+          <thead>
+            <tr>
+              <th>编著名称</th>
+              <th>出版社/平台</th>
+              <th>出版年份</th>
+              <th>角色</th>
+              <th>说明</th>
+              <th class="no-export">操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td class="no-export"><button type="button" class="delete-row-btn" data-delete-row>删除</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" data-table-card>
+      <div class="card-header">
+        <h2>讲座信息</h2>
+        <div class="actions">
+          <button type="button" class="toggle-edit-btn" data-toggle-edit>启用编辑</button>
+          <button type="button" class="add-row-btn" data-add-row>新增一行</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table data-editable-table>
+          <thead>
+            <tr>
+              <th>时间</th>
+              <th>地点</th>
+              <th>讲座主题</th>
+              <th>摘要</th>
+              <th>参与角色</th>
+              <th class="no-export">操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td data-editable></td>
+              <td class="no-export"><button type="button" class="delete-row-btn" data-delete-row>删除</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <button id="exportPdfBtn" type="button">一键导出 PDF</button>
+    <p id="statusMsg" aria-live="polite"></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3FQb2E6xv4ylNq7RZhBfRSw4rM0q4K9Q7xYgLF8A3+yQUwSWOSJyYwcmBHQYaWV7kRqeM8lHf0J+0dw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+</body>
+</html>
